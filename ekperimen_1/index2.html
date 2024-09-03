@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <!-- Menggunakan Tailwind CSS melalui CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- 
+    Flex container dengan pengaturan kolom secara default 
+    dan berubah menjadi baris pada layar menengah ke atas (md:flex-row).
+    -->
+    <div class="flex flex-col md:flex-row p-5">
+        <!-- 
+        Item pertama dengan background abu-abu, padding, margin bawah (mb-2),
+        dan margin kanan (md:mr-2) yang hanya berlaku pada layar menengah ke atas.
+        -->
+        <div class="bg-gray-200 p-5 mb-2 rounded-lg md:mr-2">Column 1</div>
+        <!-- 
+        Item kedua dengan pengaturan yang sama, tapi tanpa margin bawah dan margin kanan.
+        -->
+        <div class="bg-gray-200 p-5 rounded-lg">Column 2</div>
+    </div>
+</body>
+</html>

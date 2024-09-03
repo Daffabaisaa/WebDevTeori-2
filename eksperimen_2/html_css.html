@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Vanilla CSS</title>
+    <style>
+        /* Flexbox digunakan untuk membuat tata letak fleksibel */
+        .container {
+            display: flex;
+            /* Pada layar kecil, item ditampilkan dalam kolom (vertikal) */
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Gaya untuk setiap item dalam container */
+        .item {
+            background-color: #f3f4f6;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        /* Media query untuk layar dengan lebar minimal 768px (misalnya tablet) */
+        @media (min-width: 768px) {
+            /* Pada layar menengah ke atas, item diatur dalam baris (horizontal) */
+            .container {
+                flex-direction: row;
+            }
+
+            /* Setiap item memiliki lebar yang sama */
+            .item {
+                flex: 1;
+                margin-right: 10px;
+            }
+
+            /* Menghilangkan margin-right dari item terakhir agar tidak ada ruang kosong di akhir */
+            .item:last-child {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Column 1</div>
+        <div class="item">Column 2</div>
+    </div>
+</body>
+</html>
