@@ -32,3 +32,9 @@ BEGIN;
 INSERT INTO orders (customer_id, order_date) VALUES (1, '2024-08-29');
 INSERT INTO transactions (order_id, amount, transaction_date) VALUES (currval('orders_order_id_seq'), 300.00, '2024-08-29');
 -- Biarkan transaksi ini tetap aktif tanpa COMMIT
+
+
+-- pg_dump -U username -d database_name -F c -b -v -f backup.dump
+-- pg_restore -U username -d target_database_name -v backup.dump
+
+
